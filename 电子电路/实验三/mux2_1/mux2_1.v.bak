@@ -1,0 +1,10 @@
+module mux2_1(a,b,m,y);
+input [7:0]a,b;
+input m;
+output reg[7:0] y;
+always @(*)
+begin
+if(m==1'b0)y=a;
+else if(m==1'b1)y=b;
+end
+endmodule

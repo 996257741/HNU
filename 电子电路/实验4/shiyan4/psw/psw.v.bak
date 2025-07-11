@@ -1,0 +1,9 @@
+module psw(g_en,gf,g,clk);
+input g,clk,g_en;
+output reg gf=1'b0;
+always @(negedge clk)
+begin
+if(g_en==1'b1)
+	gf<=g;
+end
+endmodule
